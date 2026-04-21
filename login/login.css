@@ -1,0 +1,53 @@
+h1{
+    text-align: center;
+    
+}
+
+body{
+    background-color: antiquewhite;
+
+}
+p{
+    text-align: center;
+}
+img{
+    float: right;
+    width: 50%;
+    height: 12rem;
+    border-radius: 15px;
+    margin-bottom: 4rem;
+    box-shadow: 5px 5px 10px gray;
+}
+.table{
+    
+    width: 16rem;
+    box-shadow: 5px 5px 10px gray;
+    border-radius: 15px;
+    padding: 12px;
+    box-shadow: 0 5px 10px rgb(172, 158, 158) ;
+    flex-direction: column;
+    background-color: rgb(240, 223, 201);
+    backdrop-filter: blur(10px);
+    
+
+}
+
+button{
+    background-color: rgb(255, 255, 240);
+    border: 0cap;
+    border-radius: 25px;
+    width: 15rem;
+}
+
+button:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+button:hover{
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+
