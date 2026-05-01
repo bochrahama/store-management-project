@@ -1,51 +1,84 @@
-let cartCount = 0;
-let cartTotal = 0;
+// Load cart from localStorage
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 const buttons = document.querySelectorAll(".cart-box button");
+const cartCountEl = document.getElementById("cart-count");
+const cartTotalEl = document.getElementById("cart-total");
+const checkoutBtn = document.getElementById("checkout-btn");
+const finalMessage = document.getElementById("final-message");
 
+
+function updateCartUI() {
+  let totalItems = 0;
+  let totalPrice = 0;
+
+  cart.forEach(item => {
+    totalItems += item.quantity;
+    totalPrice += item.price * item.quantity;
+  });
+
+  cartCountEl.textContent = totalItems;
+  cartTotalEl.textContent = totalPrice;
+}
+
+// add to chart
 buttons.forEach(button => {
   button.addEventListener("click", () => {
 
     const card = button.closest(".card");
 
+    let name = card.querySelector("h3").textContent;
     let priceText = card.querySelector(".price").textContent;
     let price = parseInt(priceText.replace(/\D/g, ""));
-
     let quantity = parseInt(card.querySelector("input").value);
 
-    cartCount += quantity;
-    cartTotal += price * quantity;
+    cart.push({
+      name: name,
+      price: price,
+      quantity: quantity
+    });
 
-    document.getElementById("cart-count").textContent = cartCount;
-    document.getElementById("cart-total").textContent = cartTotal;
+    // save
+    localStorage.setItem("cart", JSON.stringify(cart));
 
-    
+    // update 
+    updateCartUI();
+
+    // button feedback
     button.textContent = "Added!";
     setTimeout(() => {
       button.textContent = "Add to cart";
     }, 1000);
   });
-});const checkoutBtn = document.getElementById("checkout-btn");
-const finalMessage = document.getElementById("final-message");
+});
 
+// checkout
 checkoutBtn.addEventListener("click", () => {
 
-  if (cartCount === 0) {
-    finalMessage.textContent = "Your cart is empty ";
+  if (cart.length === 0) {
+    finalMessage.textContent = "Your cart is empty";
     return;
   }
 
-  finalMessage.textContent = 
-    "Order placed! Total: " + cartTotal + " DA";
+  let total = 0;
 
-  
+  cart.forEach(item => {
+    total += item.price * item.quantity;
+  });
 
-  console.log("Saved order:", order);
+  finalMessage.textContent = "Order placed! Total: " + total + " DA";
 
-  // reset cart
-  cartCount = 0;
-  cartTotal = 0;
+  // save order 
+  localStorage.setItem("order", JSON.stringify(cart));
 
-  document.getElementById("cart-count").textContent = 0;
-  document.getElementById("cart-total").textContent = 0;
+  console.log("Saved order:", cart);
+
+  // clear cart
+  cart = [];
+  localStorage.removeItem("cart");
+
+  updateCartUI();
 });
+
+
+updateCartUI();
