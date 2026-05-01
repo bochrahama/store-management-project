@@ -60,6 +60,118 @@ nav a:hover {
 }
 
 
+.content {
+  margin-right: 220px;
+}
+
+aside {
+  position: fixed;
+  right: 0;
+  width: 200px;
+  padding: 15px;
+  border-radius: 10px 0 0 10px;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+}
+
+.scroll-text {
+  animation: scrollUp 10s linear infinite;
+}
+
+@keyframes scrollUp {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(-100%); }
+}
+
+.aside-left {
+  top: 120px;
+  height: 200px;
+  background: #fff3e6;
+  overflow: hidden;
+}
+
+
+.aside-right {
+  top: 340px; 
+  background: #dac3b3;
+}
+
+
+.navlink {
+  background-color:#9dac71;
+  padding: 15px;
+  text-align: center;
+  width: 150px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navlink ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navlink li {
+  margin: 15px 0;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.cart-box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.cart-box input {
+  width: 70px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  text-align: center;
+}
+
+.cart-box input:focus {
+  border-color: #000;
+}
+
+.cart-box button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #222;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;}
+.cart-box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.cart-box button:hover {
+  background: #444;
+}
+
+.cart-box button:active {
+  transform: scale(0.97);
+}
+
+
 .hero {
   display: flex;
   justify-content: space-between;
@@ -94,8 +206,8 @@ nav a:hover {
 }
 
 .hero-img img {
-  width: 600px;
-  height: 600px;
+  width: 400px;
+  height: 400px;
   object-fit: cover;
   border-radius: 50%;
 }
@@ -131,7 +243,7 @@ nav a:hover {
 
 .hero-text h1{
     margin-left: 250px;
-    font-size: 150px;
+    font-size: 80px;
 }
 
 .menu {
@@ -224,4 +336,17 @@ footer {
     height: 10rem;
     margin-top: 0;
     
+}
+
+footer button {
+  padding: 10px 20px;
+  background: #7f5c60;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+footer button:hover {
+  background: #60354c;
 }

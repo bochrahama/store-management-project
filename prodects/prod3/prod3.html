@@ -38,8 +38,37 @@
   
 </header>
 
+<aside class="aside-left">
+  <div class="scroll-text">
+    <p>
+      Welcome to Bishu Shop <br>
+      • No returns after 24h<br>
+      • payment at delivery<br>
+      • Enjoy your experience !<br>
+      • Thank you for choosing us!
+    </p>
+  </div>
+</aside>
 
-<section class="hero" id="home">
+<aside class="aside-right">
+  <h3>Your Cart</h3>
+  <p>Items: <span id="cart-count">0</span></p>
+  <p>Total: <span id="cart-total">0</span> DA</p>
+</aside>
+
+<div class="container">
+
+  
+  <nav class="navlink">
+    <ul>
+      <li><a href="../prod3/prod3.html">cake home page</a></li>
+      <li><a href="../prod2/prod2.html">coffee home page</a></li>
+      <li><a href="../prod1/prod1.html">healthy food home page</a></li>
+    </ul>
+  </nav>
+ <main class="content">
+  
+  <section class="hero" id="home">
   
   <div class="hero-text">
     
@@ -66,6 +95,10 @@
       <h3>spring cake</h3>
       <p class="desc">a ligth soft spring cake with fresh flavors and sweet cream</p>
       <p class="price">200DA</p>
+            <div class="cart-box">
+  <input type="number" min="1" value="1">
+  <button>Add to cart</button>
+</div>
     </div>
 
 
@@ -74,6 +107,10 @@
       <h3>strawberry swirl </h3>
       <p class="desc">soft vanilla cream with fresh strawberry and smooth cream</p>
       <p class="price">150 DA</p>
+            <div class="cart-box">
+  <input type="number" min="1" value="1">
+  <button>Add to cart</button>
+</div>
     </div>
 
 
@@ -82,6 +119,10 @@
       <h3>tiramisu</h3>
       <p class="desc">royal tiramisu</p>
       <p class="price">100 DA</p>
+            <div class="cart-box">
+  <input type="number" min="1" value="1">
+  <button>Add to cart</button>
+</div>
     </div>
 
    
@@ -90,6 +131,10 @@
       <h3>vanilla layer cake </h3>
       <p class="desc">soft vanilla layer cake with a smooth cream and rich vanilla flavor </p>
       <p class="price">150 DA</p>
+            <div class="cart-box">
+  <input type="number" min="1" value="1">
+  <button>Add to cart</button>
+</div>
     </div>
 
     <div class="card">
@@ -97,6 +142,10 @@
       <h3>orchard fresh cheesecake</h3>
       <p class="desc">creamy cheesecake with fresh fuit flavors and a smooth rich taste</p>
       <p class="price">200DA</p>
+            <div class="cart-box">
+  <input type="number" min="1" value="1">
+  <button>Add to cart</button>
+</div>
     </div>
 
    
@@ -105,6 +154,10 @@
       <h3>caramel</h3>
       <p class="desc">soft caramel cake with smooth cream and rich caramel flavors</p>
       <p class="price">120DA DH</p>
+            <div class="cart-box">
+  <input type="number" min="1" value="1">
+  <button>Add to cart</button>
+</div>
     </div>
 
   </div>
@@ -122,8 +175,10 @@
 
 
 <footer>
+  <button id="checkout-btn">Checkout</button>
+  <p id="final-message"></p>
   <p>© bishu shop 2026 </p>
 </footer>
-
+<script src="prod3.js"></script>
 </body>
 </html> 

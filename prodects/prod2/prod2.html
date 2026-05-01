@@ -39,24 +39,50 @@
 </header>
 
 
-<section class="hero" id="home">
+<aside class="aside-left">
+  <div class="scroll-text">
+    <p>
+      Welcome to Bishu Shop <br>
+      • No returns after 24h<br>
+      • payment at delivery<br>
+      • Enjoy your experience !<br>
+      • Thank you for choosing us!
+    </p>
+  </div>
+</aside>
+
+<aside class="aside-right">
+  <h3>Your Cart</h3>
+  <p>Items: <span id="cart-count">0</span></p>
+  <p>Total: <span id="cart-total">0</span> DA</p>
+</aside>
+
+<div class="container">
+
   
-  <div class="hero-text">
-    
-    <h3>we don't make coffee, we brew <br><br> </h3> <h1> Happiness</h1>
-  </div>
+  <nav class="navlink">
+    <ul>
+      <li><a href="../prod3/prod3.html">cake home page</a></li>
+      <li><a href="../prod2/prod2.html">coffee home page</a></li>
+      <li><a href="../prod1/prod1.html">healthy food home page</a></li>
+    </ul>
+  </nav>
+ <main class="content">
 
-  <div class="hero-img">
-    <img src="./b11eaf2056a5bdc25b7b8818881316c3.jpg" alt="logo">
-  </div>
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <h3>we don't make coffee, we brew</h3>
+        <h1>Happiness</h1>
+      </div>
 
-</section>
+      <div class="hero-img">
+        <img src="./b11eaf2056a5bdc25b7b8818881316c3.jpg" alt="logo">
+      </div>
+    </section>
 
+    <section class="menu" id="menu">
+      <h2>our popular coffees</h2>
 
-
-
-<section class="menu" id="menu">
-  <h2 >our popular coffees</h2>
 
   <div class="cards">
 
@@ -66,6 +92,10 @@
       <h3>Latte</h3>
       <p class="desc">a ligth soft spring cake with fresh flavors and sweet cream</p>
       <p class="price">200DA</p>
+      <div class="cart-box">
+  <input type="number" min="1" value="1">
+  <button>Add to cart</button>
+</div>
     </div>
 
 
@@ -73,7 +103,10 @@
       <img src="./b461cd25f51d77fc64ebd6e286bc2a04.jpg">
       <h3>Espresso </h3>
       <p class="desc">strong rich coffee serverd in small shot</p>
-      <p class="price">150 DA</p>
+      <p class="price">150 DA</p><div class="cart-box">
+  <input type="number" min="1" value="1">
+  <button>Add to cart</button>
+</div>
     </div>
 
 
@@ -82,6 +115,10 @@
       <h3>Cafe au lait</h3>
       <p class="desc"> Brewed coffee with warm milk </p>
       <p class="price">100 DA</p>
+      <div class="cart-box">
+  <input type="number" min="1" value="1">
+  <button>Add to cart</button>
+</div>
     </div>
 
    
@@ -90,6 +127,10 @@
       <h3>cappuccino </h3>
       <p class="desc">Espresso with steamed milk and light foam </p>
       <p class="price">150 DA</p>
+      <div class="cart-box">
+  <input type="number" min="1" value="1">
+  <button>Add to cart</button>
+</div>
     </div>
 
     <div class="card">
@@ -97,6 +138,10 @@
       <h3>Iced coffee</h3>
       <p class="desc">chilled coffee over ice, smooth and refreching </p>
       <p class="price">200DA</p>
+     <div class="cart-box">
+  <input type="number" min="1" value="1">
+  <button>Add to cart</button>
+</div>
     </div>
 
    
@@ -105,6 +150,10 @@
       <h3>Machiato</h3>
       <p class="desc"> Espresso topped with a touch of milk </p>
       <p class="price">120DA DH</p>
+     <div class="cart-box">
+  <input type="number" min="1" value="1">
+  <button>Add to cart</button>
+</div>
     </div>
 
   </div>
@@ -122,8 +171,11 @@
 
 
 <footer>
+  <button id="checkout-btn">Checkout</button>
+  <p id="final-message"></p>
   <p>© bishu shop 2026 </p>
 </footer>
-
+<script src="prod2.js"></script>
+</body>
 </body>
 </html> 

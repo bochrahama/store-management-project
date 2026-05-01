@@ -37,7 +37,35 @@
   <img src="./coffeeshop (1).png">
   
 </header>
+<aside class="aside-left">
+  <div class="scroll-text">
+    <p>
+      Welcome to Bishu Shop <br>
+      • No returns after 24h<br>
+      • payment at delivery<br>
+      • Enjoy your experience !<br>
+      • Thank you for choosing us!
+    </p>
+  </div>
+</aside>
 
+<aside class="aside-right">
+  <h3>Your Cart</h3>
+  <p>Items: <span id="cart-count">0</span></p>
+  <p>Total: <span id="cart-total">0</span> DA</p>
+</aside>
+
+<div class="container">
+
+  
+  <nav class="navlink">
+    <ul>
+      <li><a href="../prod3/prod3.html">cake home page</a></li>
+      <li><a href="../prod2/prod2.html">coffee home page</a></li>
+      <li><a href="../prod1/prod1.html">healthy food home page</a></li>
+    </ul>
+  </nav>
+ <main class="content">
 
 <section class="hero" id="home">
   
@@ -66,6 +94,10 @@
       <h3>Green Salad</h3>
       <p class="desc">Fresh vegetables with olive oil</p>
       <p class="price">200DA</p>
+       <div class="cart-box">
+  <input type="number" min="1" value="1">
+  <button>Add to cart</button>
+</div>
     </div>
 
 
@@ -74,6 +106,10 @@
       <h3>fresh juice </h3>
       <p class="desc">Natural juice without sugar.</p>
       <p class="price">150 DA</p>
+       <div class="cart-box">
+  <input type="number" min="1" value="1">
+  <button>Add to cart</button>
+</div>
     </div>
 
 
@@ -82,6 +118,10 @@
       <h3>Healthy Bowl</h3>
       <p class="desc">Rice, chicken and fresh vegetables.</p>
       <p class="price">100 DA</p>
+       <div class="cart-box">
+  <input type="number" min="1" value="1">
+  <button>Add to cart</button>
+</div>
     </div>
 
    
@@ -90,6 +130,10 @@
       <h3>Avocado Toast </h3>
       <p class="desc">Healthy bread with avocado </p>
       <p class="price">150 DA</p>
+       <div class="cart-box">
+  <input type="number" min="1" value="1">
+  <button>Add to cart</button>
+</div>
     </div>
 
     <div class="card">
@@ -97,6 +141,10 @@
       <h3>Smoothie</h3>
       <p class="desc">Banana, milk and honey mix.</p>
       <p class="price">200DA</p>
+       <div class="cart-box">
+  <input type="number" min="1" value="1">
+  <button>Add to cart</button>
+</div>
     </div>
 
    
@@ -105,6 +153,10 @@
       <h3>Oatmeal</h3>
       <p class="desc">Oats with fruits and nuts</p>
       <p class="price">120DA DH</p>
+       <div class="cart-box">
+  <input type="number" min="1" value="1">
+  <button>Add to cart</button>
+</div>
     </div>
 
   </div>
@@ -122,8 +174,10 @@
 
 
 <footer>
+   <button id="checkout-btn">Checkout</button>
+  <p id="final-message"></p>
   <p>© bishu shop 2026 </p>
 </footer>
-
+<script src="prod1.js"></script>
 </body>
 </html> 
