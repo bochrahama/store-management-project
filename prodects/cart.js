@@ -7,9 +7,9 @@ const cartTotalEl = document.getElementById("cart-total");
 const checkoutBtn = document.getElementById("checkout-btn");
 const finalMessage = document.getElementById("final-message");
 
-// --------------------
+
 // UPDATE UI FUNCTION
-// --------------------
+
 function updateCartUI() {
   let totalItems = 0;
   let totalPrice = 0;
@@ -23,9 +23,9 @@ function updateCartUI() {
   if (cartTotalEl) cartTotalEl.textContent = totalPrice;
 }
 
-// --------------------
-// ADD TO CART (works on ALL pages)
-// --------------------
+
+// ADD TO CART 
+
 document.querySelectorAll(".cart-box button").forEach(button => {
   button.addEventListener("click", () => {
 
@@ -53,9 +53,9 @@ document.querySelectorAll(".cart-box button").forEach(button => {
   });
 });
 
-// --------------------
+
 // CHECKOUT (footer button)
-// --------------------
+
 if (checkoutBtn) {
   checkoutBtn.addEventListener("click", () => {
 
@@ -85,7 +85,6 @@ if (checkoutBtn) {
   });
 }
 
-// --------------------
 // INIT ON PAGE LOAD
-// --------------------
+
 updateCartUI();
